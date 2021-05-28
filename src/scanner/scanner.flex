@@ -5,6 +5,7 @@ DIGIT   [0-9]
 LETTER  [a-zA-Z]
 %%
 (" "|\n|\t)
+"//".*
 \+          { return T_PLUS; }
 while       { return T_WHILE; }
 {LETTER}+   { return T_IDENT; }
