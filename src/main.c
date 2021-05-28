@@ -4,7 +4,7 @@
 
 int main(int argc, char **argv)
 {
-    struct Adelie adelie = { M_SHELL };
-    printf("%d\n", adelie.mode);
+    struct Startup start = { M_SHELL };
+    printf("%d\n", start.mode);
     return 0;
 }

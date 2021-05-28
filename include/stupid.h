@@ -1,13 +1,13 @@
 #ifndef STUPID_H
 #define STUPID_H
 
-enum AdelieMode {
+enum StartMode {
     M_FILE,
     M_SHELL,
 };
 
-struct Adelie {
-    enum AdelieMode mode;
+struct Startup {
+    enum StartMode mode;
 };
 
 #endif
