@@ -10,6 +10,11 @@ LETTER  [a-zA-Z]
 "="     { return T_EQ; }
 ":"     { return T_COLON; }
 "+"     { return T_PLUS; }
+"["     { return T_LBRACKET; }
+"]"     { return T_RBRACKET; }
+"{"     { return T_LBRACE; }
+"}"     { return T_RBRACE; }
+","     { return T_COMMA; }
 array       { return TK_ARRAY; }
 boolean     { return TK_BOOLEAN; }
 char        { return TK_CHAR; }

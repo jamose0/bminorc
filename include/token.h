@@ -8,6 +8,11 @@ enum TokenType {
     T_COLON,
     T_EQ,
     T_SEMICOLON,
+    T_LBRACKET,
+    T_RBRACKET,
+    T_LBRACE,
+    T_RBRACE,
+    T_COMMA,
     T_IDENT,
     T_ERR,
     /* Keywords */
