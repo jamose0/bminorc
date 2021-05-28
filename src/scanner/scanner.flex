@@ -6,6 +6,8 @@ LETTER  [a-zA-Z]
 %%
 (" "|\n|\t)
 "//".*
+";"     { return T_SEMICOLON; }
+"="     { return T_EQ; }
 ":"     { return T_COLON; }
 "+"     { return T_PLUS; }
 array       { return TK_ARRAY; }

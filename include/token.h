@@ -6,7 +6,8 @@ enum TokenType {
     T_NUM,
     T_PLUS,
     T_COLON,
-    T_WHILE,
+    T_EQ,
+    T_SEMICOLON,
     T_IDENT,
     T_ERR,
     /* Keywords */
