@@ -5,11 +5,11 @@ DIGIT   [0-9]
 LETTER  [a-zA-Z]
 %%
 (" "|\n|\t)
-\+          { return TOKEN_PLUS; }
-while       { return TOKEN_WHILE; }
-{LETTER}+   { return TOKEN_IDENT; }
-{DIGIT}+    { return TOKEN_DIGIT; }
-.           { return TOKEN_ERR; }
+\+          { return T_PLUS; }
+while       { return T_WHILE; }
+{LETTER}+   { return T_IDENT; }
+{DIGIT}+    { return T_NUM; }
+.           { return T_ERR; }
 %%
 int yywrap() { return 1; }
 
