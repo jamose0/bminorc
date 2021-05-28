@@ -9,10 +9,12 @@ extern char *yytext;
 
 int main(int argc, char **argv)
 {
-    struct Startup start = { M_SHELL };
-    printf("%d\n", start.mode);
+    if (argc != 2)
+        fprintf(stderr, "Wrong number of arguments...");
 
-    yyin = fopen("program.bminor", "r");
+    printf("%s\n", argv[1]);
+
+    yyin = fopen(argv[1], "r");
     if (!yyin) {
         fprintf(stderr, "No file\n");
         return 1;

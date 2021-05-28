@@ -5,6 +5,7 @@ enum TokenType {
     T_EOF,
     T_NUM,
     T_PLUS,
+    T_COLON,
     T_WHILE,
     T_IDENT,
     T_ERR,
