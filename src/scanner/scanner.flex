@@ -13,6 +13,8 @@ LETTER  [a-zA-Z]
 "]"     { return T_RBRACKET; }
 "{"     { return T_LBRACE; }
 "}"     { return T_RBRACE; }
+"("     { return T_LPAREN; }
+")"     { return T_RPAREN; }
 ","     { return T_COMMA; }
 "+"     { return T_PLUS; }
 "-"     { return T_MINUS; }
@@ -23,6 +25,14 @@ LETTER  [a-zA-Z]
 "*"     { return T_STAR; }
 "/"     { return T_SLASH; }
 "%"     { return T_MOD; }
+"<"     { return T_LE; }
+">"     { return T_GR; }
+"=="    { return T_EQEQ; }
+"!="    { return T_BANGEQ; }
+"<="    { return T_LEQ; }
+">="    { return T_GEQ; }
+"&&"    { return T_AND; }
+"||"    { return T_OR; }
 array       { return TK_ARRAY; }
 boolean     { return TK_BOOLEAN; }
 char        { return TK_CHAR; }

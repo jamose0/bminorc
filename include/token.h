@@ -26,6 +26,15 @@ enum TokenType {
     T_STAR,
     T_SLASH,
     T_MOD,
+    T_AND,
+    T_OR,
+    /* Comparison operators */
+    T_EQEQ,
+    T_BANGEQ,
+    T_LEQ,
+    T_GEQ,
+    T_LE,
+    T_GR,
     /* Keywords */
     TK_ARRAY,
     TK_BOOLEAN,
