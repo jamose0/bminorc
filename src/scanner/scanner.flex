@@ -7,7 +7,7 @@ LETTER  [a-zA-Z]
 %%
 (" "|\n|\t)
 "//".*
-\"(.)*\"    { printf("%s\n", yytext); stringClean(yytext); return T_STRING; }
+\"(.)*\"    { stringClean(yytext); return T_STRING; }
 
 ";"     { return T_SEMICOLON; }
 "="     { return T_EQ; }

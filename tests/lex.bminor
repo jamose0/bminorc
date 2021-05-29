@@ -1,4 +1,5 @@
 // Declare and initialize some variables
+print "some\ttime\n";
 x: integer = 52;
 b: boolean = true;
 
