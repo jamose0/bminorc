@@ -1,12 +1,19 @@
 %{
 #include "token.h"
+
+void stringClean()
+{
+    yytext[strlen(yytext) - 1] = '\0';
+    yytext += 1;
+}
 %}
 DIGIT   [0-9]
 LETTER  [a-zA-Z]
 %%
 (" "|\n|\t)
 "//".*
-\"(.)*\"    { return T_STRING; }
+\"(.)*\"    { printf("%s\n", yytext); stringClean(yytext); return T_STRING; }
+
 ";"     { return T_SEMICOLON; }
 "="     { return T_EQ; }
 ":"     { return T_COLON; }
@@ -54,4 +61,3 @@ while       { return TK_WHILE; }
 .                                       { return T_ERR; }
 %%
 int yywrap() { return 1; }
-
