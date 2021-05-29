@@ -1,11 +1,6 @@
 %{
 #include "token.h"
-
-void stringClean()
-{
-    yytext[strlen(yytext) - 1] = '\0';
-    yytext += 1;
-}
+#include "scanner/utilities.h"
 %}
 DIGIT   [0-9]
 LETTER  [a-zA-Z]
