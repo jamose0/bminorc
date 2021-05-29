@@ -1,11 +1,14 @@
 %{
 #include "token.h"
 #include "scanner/utilities.h"
+static int lline = 1;
+int getLine() { return lline; }
 %}
 DIGIT   [0-9]
 LETTER  [a-zA-Z]
 %%
-(" "|\n|\t)
+(" "|\t)
+\n      { ++lline; }
 "//".*
 \"(.)*\"    { stringClean(yytext); return T_STRING; }
 

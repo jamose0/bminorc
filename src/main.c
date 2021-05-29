@@ -8,6 +8,8 @@ extern FILE *yyin;
 extern int yylex();
 extern char *yytext;
 
+int getLine();
+
 int main(int argc, char **argv)
 {
     if (argc != 2) {
@@ -27,7 +29,7 @@ int main(int argc, char **argv)
         enum TokenType t = yylex();
         if (t == T_EOF)
             break;
-        printf("Token: %d with text: %s\n", t, yytext);
+        printf("Token: %d with text: %s at line: %d\n", t, yytext, getLine());
     }
 
     return 0;
