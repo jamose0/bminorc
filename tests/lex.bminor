@@ -1,3 +1,5 @@
 // Declare and initialize some variables
 x: integer = 52;
 b: boolean = true;
+
+print "hello\n";

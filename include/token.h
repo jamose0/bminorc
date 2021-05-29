@@ -8,6 +8,7 @@ enum TokenType {
     T_SEMICOLON,
     T_COMMA,
     T_NUM,
+    T_STRING,
     T_IDENT,
     /* Arithmetic operators */
     T_EQ,
