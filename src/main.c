@@ -2,6 +2,7 @@
 #include "token.h"
 
 #include <stdio.h>
+#include <stdlib.h>
 
 extern FILE *yyin;
 extern int yylex();
@@ -9,8 +10,10 @@ extern char *yytext;
 
 int main(int argc, char **argv)
 {
-    if (argc != 2)
-        fprintf(stderr, "Wrong number of arguments...");
+    if (argc != 2) {
+        fprintf(stderr, "Wrong number of arguments...\n");
+        exit(1);
+    }
 
     printf("%s\n", argv[1]);
 
